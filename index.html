@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Snake Game</title>
-	<style type="text/css" src="style.css"></style>
+	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="p5.js"></script>
 	<script type="text/javascript" src="snake.js"></script>
 	<script type="text/javascript" src="sketch.js"></script>
@@ -13,5 +13,12 @@
 	<input type="number" id="difficulty" value="15">
 	<button onclick="draw()">SUBMIT</button>
 	</p>
+	<div>
+		<button style="float:center;margin-left:40%;width:10%;height:10%;text-align:center;" onclick="keyPressed(38)">&ensp; Up &ensp;</button>
+		<br>
+		<button style="float:center;margin-left:30%;width:10%;height:10%;text-align:center;;" onclick="keyPressed(37)">&ensp; Left &ensp;</button>
+		<button style="float:center;margin-left:10%;width:10%;height:10%;text-align:center;" onclick="keyPressed(39)">&ensp; Right &ensp;</button>
+		<button style="float:center;margin-left:40%;width:10%;height:10%;text-align:center;" onclick="keyPressed(40)">&ensp; Down &ensp;</button>
+	</div>
 </body>
 </html>
