@@ -28,7 +28,7 @@ function snake(){
 		this.y_go=y;
 	}
 	this.eat = function() {
-		if (this.x == food_x && this.y == food_y){
+		if ((this.x == food_x && this.y == food_y) || (dist(this.x,this.y,food_x,food_y)<1)){
 			food_locate();
 			this.total++;
 			this.pos[this.total-1]=[];
@@ -39,7 +39,10 @@ function snake(){
 		{
 			for (var j=i+1;j<this.total;j++)
 			if (this.pos[i][0]==this.pos[j][0] && this.pos[i][1]==this.pos[j][1])
-				end_game();
+				{
+					end_game();
+					return 0;
+				}
 			if (this.pos[i][0]<0)
 				this.pos[i][0]+=width;
 			if (this.pos[i][0]>=width)
