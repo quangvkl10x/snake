@@ -18,8 +18,10 @@ function end_game(){
 function food_locate(){
 	food_x=Math.floor(Math.random()*(w-(w%scl)));
 	food_x=food_x-(food_x%scl);
+	if (food_x>=w) food_x-=scl;
 	food_y=Math.floor(Math.random()*(h-(h%scl)));
 	food_y=food_y-(food_y%scl);
+	if (food_y>=h) food_y-=scl;
 }
 function keyPressed(k){
 	if (((keyCode == UP_ARROW) || (k==38)) && last_press != "D"){
