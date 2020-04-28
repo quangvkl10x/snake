@@ -62,7 +62,7 @@ function snake(){
 		for (var i=0;i<this.total;i++){
 			if ((i>0) && (this.pos[i][0]==this.x && this.pos[i][1]==this.y)){
 				end_game();
-				return 0;
+				break;
 			}
 			if (this.pos[i][0]<0)
 				this.pos[i][0]+=width;
